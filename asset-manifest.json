@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/house-price-prediction/static/css/main.fc1d511e.css",
-    "main.js": "/house-price-prediction/static/js/main.e747d089.js",
+    "main.js": "/house-price-prediction/static/js/main.c771a3c8.js",
     "static/js/453.99f80013.chunk.js": "/house-price-prediction/static/js/453.99f80013.chunk.js",
     "index.html": "/house-price-prediction/index.html",
     "main.fc1d511e.css.map": "/house-price-prediction/static/css/main.fc1d511e.css.map",
-    "main.e747d089.js.map": "/house-price-prediction/static/js/main.e747d089.js.map",
+    "main.c771a3c8.js.map": "/house-price-prediction/static/js/main.c771a3c8.js.map",
     "453.99f80013.chunk.js.map": "/house-price-prediction/static/js/453.99f80013.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc1d511e.css",
-    "static/js/main.e747d089.js"
+    "static/js/main.c771a3c8.js"
   ]
 }
