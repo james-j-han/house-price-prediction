@@ -5,7 +5,7 @@ import FeatureImpactPlot from "./components/FeatureImpactPlot";
 import PredictedVsActualPlot from "./components/PredictedVsActualPlot";
 import CorrelationHeatmap from "./components/CorrelationHeatmap";
 
-const API = "house-price-prediction-backend-production.up.railway.app";
+const REACT_APP_API_BASE = "https://house-price-prediction-backend-production.up.railway.app";
 
 const App = () => {
   const [models, setModels] = useState([]);
@@ -31,7 +31,7 @@ const App = () => {
 
   // Fetch available models on load
   useEffect(() => {
-    fetch(`https://${API}/models`)
+    fetch(`${REACT_APP_API_BASE}/models`)
       .then((res) => res.json())
       .then((data) => {
         setModels(data.models);
@@ -47,7 +47,7 @@ const App = () => {
     if (!model) return;
 
     fetch(
-      `https://${API}/correlation?model=${encodeURIComponent(model)}`
+      `${REACT_APP_API_BASE}/correlation?model=${encodeURIComponent(model)}`
     )
       .then((r) => {
         if (!r.ok) throw new Error("No correlation matrix");
@@ -79,7 +79,7 @@ const App = () => {
 
     try {
       // 2) predict endpoint
-      const predRes = await fetch(`https://${API}/predict`, {
+      const predRes = await fetch(`${REACT_APP_API_BASE}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -89,7 +89,7 @@ const App = () => {
       setPrediction(predData.prediction);
 
       try {
-        const wtRes = await fetch(`https:??${API}/feature-weights`, {
+        const wtRes = await fetch(`${REACT_APP_API_BASE}/feature-weights`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ model }),
@@ -104,7 +104,7 @@ const App = () => {
 
       // 3) correlation matrix
       const corrRes = await fetch(
-        `https://${API}/correlation?model=${encodeURIComponent(model)}`
+        `${REACT_APP_API_BASE}/correlation?model=${encodeURIComponent(model)}`
       );
       const corrData = await corrRes.json();
       if (!corrRes.ok)
@@ -112,7 +112,7 @@ const App = () => {
       setCorrMatrix(corrData.matrix);
 
       // 4) predicted vs actual
-      const evalRes = await fetch(`https:??${API}/evaluation`, {
+      const evalRes = await fetch(`${REACT_APP_API_BASE}/evaluation`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ model }),
