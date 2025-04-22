@@ -1,0 +1,187 @@
+/* Global Reset & Theme */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #35393C; /* Onyx */
+  color: #F0F0F0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #42858C; /* Dark Cyan */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+  background-color: #397367; /* Hooker's green */
+  color: #F0F0F0;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Main Layout */
+.main {
+  padding: 1rem;
+  height: calc(100vh - 160px); /* minus header and footer */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.top-section {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+}
+
+/* .bottom-section {
+  display: flex;
+  flex: 2;
+  gap: 1rem;
+} */
+
+/* Section Titles */
+.section-title {
+  color: #63CCCA; /* Robin Egg Blue */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.input-section {
+  background-color: #2B2E30;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Each row for a label + input */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row > label {
+  color: #F0F0F0;
+  font-weight: 500;
+  flex: 0 0 150px;       /* fixed 150px label column */
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.form-row input {
+  flex: 1 1 auto;
+}
+
+/* Inputs & Select */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #5DA399;
+  color: #fff;
+  font-size: 1rem;
+  flex: 1;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #63CCCA;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;    
+}
+
+.checkbox-item {
+  display: inline-flex;  
+  align-items: center;
+  gap: 0.25rem;       
+}
+
+.checkbox-item label {
+  min-width: 0 !important;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* Predict Button */
+.predict-button {
+  align-self: center;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: #42858C;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.predict-button:hover {
+  background-color: #5DA399;
+}
+
+.prediction-output {
+  flex: 2;
+  background: #2b2e30;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.prediction-title {
+  color: #63ccca;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prediction-value {
+  color: #ffffff;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.prediction-placeholder {
+  color: #999;
+  font-size: 1rem;
+}
+
+.plot-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  gap: 1rem;
+  background-color: #2B2E30;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  /* font-size: 2rem; */
+  color: #63CCCA;
+}
