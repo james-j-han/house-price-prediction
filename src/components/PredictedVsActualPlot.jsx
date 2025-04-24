@@ -40,14 +40,15 @@ const PredictedVsActualPlot = ({ actual, predicted, userPred }) => {
     <Plot
       data={traces}
       layout={{
-        autosize: true,
+        // autosize: true,
         title: { text: "Predicted vs Actual", font: { color: "#63CCCA" } },
-        xaxis: { title: "Actual Price", tickformat: ",.0f" },
-        yaxis: { title: "Predicted Price", tickformat: ",.0f" },
+        xaxis: { type: "linear", autorange: true, title: "Actual Price", tickformat: ",.0f" },
+        yaxis: { type: "linear", autorange: true, title: "Predicted Price", tickformat: ",.0f" },
         paper_bgcolor: "#2B2E30",
         plot_bgcolor: "#2B2E30",
         font: { color: "#F0F0F0" },
         showlegend: false,
+        margin: { l: 120, t: 60, r: 20, b: 40 },
       }}
       useResizeHandler={true}
       style={{ width: "100%", height: "100%" }}

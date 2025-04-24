@@ -22,12 +22,21 @@ const FeatureImpactPlot = ({ featureWeights }) => {
         },
       ]}
       layout={{
-        autosize: true,
+        // autosize: true,
         title: { text: "Feature Impact", font: { color: "#63CCCA" } },
-        margin: { l: 100, r: 20, t: 60, b: 40 },
-        paper_bgcolor: "#2B2E30",
-        plot_bgcolor: "#2B2E30",
-        font: { color: "#F0F0F0" },
+        xaxis: { 
+          type: 'linear',
+          autorange: true,
+          title: 'Coefficient'
+        },
+        yaxis: { 
+          type: 'category',
+          automargin: true
+        },
+        margin: { l: 120, t: 60, r: 20, b: 40 },
+        paper_bgcolor: '#2B2E30',
+        plot_bgcolor: '#2B2E30',
+        font: { color: '#F0F0F0' }
       }}
       useResizeHandler={true}
       style={{ width: "100%", height: "100%" }}

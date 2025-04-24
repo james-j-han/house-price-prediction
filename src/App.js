@@ -6,6 +6,7 @@ import PredictedVsActualPlot from "./components/PredictedVsActualPlot";
 import CorrelationHeatmap from "./components/CorrelationHeatmap";
 
 const REACT_APP_API_BASE = "https://house-price-prediction-backend-production.up.railway.app";
+// const REACT_APP_API_BASE = "http://localhost:5000";
 
 const App = () => {
   const [models, setModels] = useState([]);

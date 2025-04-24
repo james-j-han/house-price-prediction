@@ -24,16 +24,27 @@ const CorrelationHeatmap = ({ matrix }) => {
           colorscale: "YlOrRd",
           reversescale: true,
           showscale: true,
+          zmin: -1,
+          zmax: 1,
         },
       ]}
       layout={{
-        autosize: true,
+        // autosize: true,
+        xaxis: { type: "category", automargin: true, tickangle: -90 },
+        yaxis: { type: "category", automargin: true },
+        coloraxis: {
+          // ensures Plotly treats the colorbar scale as numeric
+          colorbar: {
+            title: "r",
+            titleside: "right",
+          },
+        },
         title: { text: "Correlation Matrix", font: { color: "#63CCCA" } },
-        margin: { l: 80, r: 20, t: 60, b: 80 },
+        margin: { l: 120, t: 60, r: 20, b: 40 },
+        // margin: { l: 80, r: 20, t: 60, b: 80 },
         paper_bgcolor: "#2B2E30",
         plot_bgcolor: "#2B2E30",
         font: { color: "#F0F0F0" },
-        xaxis: { tickangle: -45 },
       }}
       useResizeHandler={true}
       style={{ width: "100%", height: "100%" }}
